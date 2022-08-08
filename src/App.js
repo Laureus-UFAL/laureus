@@ -4,6 +4,8 @@ import { ThemeProvider } from 'styled-components';
 import { defaultTheme } from 'contexts/theme';
 
 import { publicRoutes, privateRoutes } from 'routes';
+import GlobalStyles from 'GlobalStyles';
+import ColorStyles from 'ColorStyles';
 
 function App() {
   const publicPages = useRoutes(publicRoutes);
@@ -16,6 +18,8 @@ function App() {
       <div className="App">
         <Suspense fallback={null}>{isAuth ? privatePages : publicPages}</Suspense>
       </div>
+      <GlobalStyles />
+      <ColorStyles />
     </ThemeProvider>
   );
 }

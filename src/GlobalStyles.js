@@ -11,4 +11,8 @@ export default createGlobalStyle`
   *:focus {
     outline: transparent;
   }
+
+  a {
+    text-decoration: none;
+  }
 `;

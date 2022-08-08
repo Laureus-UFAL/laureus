@@ -4,6 +4,7 @@ const primary = (props) => props.theme.colors.primary;
 const secondary = (props) => props.theme.colors.secondary;
 const text = (props) => props.theme.colors.text;
 const textLight = (props) => props.theme.colors.text_light;
+const sidebarBackground = (props) => props.theme.colors.sidebar_background;
 
 export default createGlobalStyle`
   :root {
@@ -12,6 +13,8 @@ export default createGlobalStyle`
 
     --text: ${text};
     --textLight: ${textLight};
+
+    --sidebarBackground: ${sidebarBackground};
 
     --success: #8BFF06;
     --error: #F2453D;
