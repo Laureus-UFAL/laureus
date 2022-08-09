@@ -50,6 +50,8 @@ export const Button = styled.button`
   color: var(--text);
   background-color: transparent;
   margin-left: ${(props) => (props.expanded ? '20px' : '0')};
+
+  word-break: break-word;
 `;
 
 export const Icon = styled.div`
