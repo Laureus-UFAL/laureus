@@ -10,7 +10,6 @@ export const Wrapper = styled.div`
   border-radius: 0 30px 30px 0;
   box-shadow: inset -20px 0px 50px #0000000f, 0px 3px 50px #00000029;
   background-color: var(--sidebarBackground);
-
   max-width: 250px;
 `;
 
@@ -39,10 +38,8 @@ export const Button = styled.button`
   align-content: center;
   color: var(--text);
   background-color: transparent;
-
   align-self: flex-end;
   margin-top: auto;
-
   cursor: pointer;
 
   &:hover {

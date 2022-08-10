@@ -15,7 +15,7 @@ function Sidebar({ options }) {
   }
 
   return (
-    <Styled.Wrapper>
+    <Styled.Wrapper expanded={menuExpanded}>
       <Styled.Logo expanded={menuExpanded} src="images/logo-preta@2x.png" />
 
       {options.map((option, index) => (
@@ -24,7 +24,7 @@ function Sidebar({ options }) {
         </SidebarButton>
       ))}
 
-      <Styled.Button expanded={menuExpanded} onClick={toggleSidebar}>
+      <Styled.Button onClick={toggleSidebar}>
         {menuExpanded ? <FaAngleDoubleLeft /> : <FaAngleDoubleRight />}
       </Styled.Button>
     </Styled.Wrapper>

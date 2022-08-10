@@ -4,6 +4,7 @@ const primary = (props) => props.theme.colors.primary;
 const secondary = (props) => props.theme.colors.secondary;
 const text = (props) => props.theme.colors.text;
 const textLight = (props) => props.theme.colors.text_light;
+const background = (props) => props.theme.colors.background;
 const sidebarBackground = (props) => props.theme.colors.sidebar_background;
 
 export default createGlobalStyle`
@@ -14,6 +15,7 @@ export default createGlobalStyle`
     --text: ${text};
     --textLight: ${textLight};
 
+    --background: ${background};
     --sidebarBackground: ${sidebarBackground};
 
     --success: #8BFF06;
