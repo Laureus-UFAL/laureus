@@ -15,7 +15,7 @@ function Sidebar({ options }) {
   }
 
   return (
-    <Styled.Wrapper expanded={menuExpanded}>
+    <Styled.Wrapper>
       <Styled.Logo expanded={menuExpanded} src="images/logo-preta@2x.png" />
 
       {options.map((option, index) => (
