@@ -24,7 +24,7 @@ function Sidebar({ options }) {
         </SidebarButton>
       ))}
 
-      <Styled.Button expanded={menuExpanded} onClick={toggleSidebar}>
+      <Styled.Button onClick={toggleSidebar}>
         {menuExpanded ? <FaAngleDoubleLeft /> : <FaAngleDoubleRight />}
       </Styled.Button>
     </Styled.Wrapper>
