@@ -12,9 +12,9 @@ function BaseLayout() {
   });
 
   return (
-    <Styled.Wrapper>
+    <Styled.Wrapper isDesktopOrLaptop={isDesktopOrLaptop}>
       <Menu />
-      <Styled.Container>
+      <Styled.Container isDesktopOrLaptop={isDesktopOrLaptop}>
         {isDesktopOrLaptop && <TopBar />}
         <Outlet />
       </Styled.Container>
