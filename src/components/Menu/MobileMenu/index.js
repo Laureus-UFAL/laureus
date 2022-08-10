@@ -1,1 +1,1 @@
-export { default } from './SidebarMobile';
+export { default } from './MobileMenu';
