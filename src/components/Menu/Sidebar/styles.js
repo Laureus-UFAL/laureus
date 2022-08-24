@@ -8,6 +8,8 @@ export const Wrapper = styled.div`
   flex-direction: column;
   height: 100vh;
   border-radius: 0 30px 30px 0;
+  -webkit-box-shadow: inset -20px 0px 50px #0000000f, 0px 3px 50px #00000029;
+  -moz-box-shadow: inset -20px 0px 50px #0000000f, 0px 3px 50px #00000029;
   box-shadow: inset -20px 0px 50px #0000000f, 0px 3px 50px #00000029;
   background-color: var(--sidebarBackground);
   max-width: 250px;

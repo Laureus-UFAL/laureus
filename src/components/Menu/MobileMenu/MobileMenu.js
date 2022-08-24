@@ -6,7 +6,7 @@ import SidebarMobile from './SidebarMobile';
 
 import * as Styled from './styles';
 
-function MobileMenu() {
+function MobileMenu({ options }) {
   const [isOpen, setIsOpen] = useState(false);
   const sidebarRef = useOnclickOutside(() => {
     setIsOpen(false);
@@ -15,7 +15,7 @@ function MobileMenu() {
   return (
     <Styled.MenuMobile>
       <TopBarMobile openSidebar={() => setIsOpen(true)} />
-      <SidebarMobile isOpen={isOpen} setIsOpen={setIsOpen} ref={sidebarRef} />
+      <SidebarMobile options={options} isOpen={isOpen} setIsOpen={setIsOpen} ref={sidebarRef} />
     </Styled.MenuMobile>
   );
 }

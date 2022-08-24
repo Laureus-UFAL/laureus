@@ -16,11 +16,10 @@ export const TopBarTitle = styled.div`
   align-items: center;
   justify-content: center;
   position: absolute;
-  width: 100%;
-  left: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
 `;
 
 export const ButtonWrapper = styled.div`
   cursor: pointer;
-  z-index: 1;
 `;
