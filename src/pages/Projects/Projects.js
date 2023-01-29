@@ -1,10 +1,19 @@
 import { FaFileAlt } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 import PageTitle from 'components/PageTitle';
 import Table from 'components/Table';
 import Card from 'components/Card';
+import Search from 'components/Search';
+
+import * as Styled from './style';
+import Button from 'components/Button';
+import { FiFilePlus } from 'react-icons/fi';
+import ExportProject from 'components/Projects/ExportProject';
 
 function Projects() {
+  const navigate = useNavigate();
+
   const headers = [
     {
       text: 'Nome do cliente',
@@ -75,11 +84,52 @@ function Projects() {
 
   return (
     <>
-      <PageTitle title="Projetos" subtitle="Gerencie seus projetos" canGoBack />
+      <PageTitle
+        title="Projetos"
+        subtitle="Visão geral de todos os projetos cadastrados"
+        canGoBack
+      />
 
-      <Card>
-        <Table title="Lista de projetos" icon={<FaFileAlt />} headers={headers} items={items} />
-      </Card>
+      <Styled.Content>
+        <Styled.MainContent>
+          <Search
+            placeholder="Pesquise projetos pelo nome do cliente, cpf ou cidade"
+            onChange={(e) => console.log(e.target.value)}
+          />
+          <Card>
+            <Table title="Lista de projetos" icon={<FaFileAlt />} headers={headers} items={items} />
+          </Card>
+        </Styled.MainContent>
+
+        <Styled.SideContent>
+          <Button
+            borderRadius="20px"
+            outlined
+            color="black"
+            onClick={() => navigate('/projetos/criar-projeto')}
+          >
+            <Styled.NewProjectButton>
+              <FiFilePlus />
+              <strong>Novo</strong>
+              <span>&nbsp;projeto</span>
+            </Styled.NewProjectButton>
+          </Button>
+
+          <Card>
+            <Styled.ApprovedProjects>
+              <Styled.ApprovedProjectsQuantity>11</Styled.ApprovedProjectsQuantity>
+              <span>Projetos</span>
+              <Styled.ApprovedProjectsColored>Aprovados</Styled.ApprovedProjectsColored>
+            </Styled.ApprovedProjects>
+
+            <Styled.Chart />
+          </Card>
+
+          <Card>
+            <ExportProject />
+          </Card>
+        </Styled.SideContent>
+      </Styled.Content>
     </>
   );
 }

@@ -13,7 +13,7 @@ export const Title = styled.span`
 
 export const Subtitle = styled.span`
   font-size: 18px;
-  font-weight: light;
+  font-weight: 200;
   color: var(--greyDark);
 `;
 
